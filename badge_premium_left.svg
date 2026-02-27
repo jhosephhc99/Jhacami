@@ -1,0 +1,308 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 260" width="520" height="260">
+  <defs>
+
+    <!-- CUERO AZUL MARINO -->
+    <linearGradient id="lth" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#232f50"/>
+      <stop offset="20%"  stop-color="#16203a"/>
+      <stop offset="45%"  stop-color="#1e2d52"/>
+      <stop offset="70%"  stop-color="#141e3c"/>
+      <stop offset="100%" stop-color="#111a38"/>
+    </linearGradient>
+
+    <!-- Textura cuero sutil -->
+    <filter id="ftex" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" seed="5" result="n"/>
+      <feColorMatrix in="n" type="saturate" values="0" result="gn"/>
+      <feBlend in="SourceGraphic" in2="gn" mode="multiply" result="bl"/>
+      <feComposite in="bl" in2="SourceGraphic" operator="in"/>
+    </filter>
+
+    <!-- MARCO DORADO -->
+    <linearGradient id="gld" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#f7e888"/>
+      <stop offset="10%"  stop-color="#b8860b"/>
+      <stop offset="28%"  stop-color="#ecca44"/>
+      <stop offset="46%"  stop-color="#fdf5b0"/>
+      <stop offset="62%"  stop-color="#d4a012"/>
+      <stop offset="80%"  stop-color="#9a6e00"/>
+      <stop offset="100%" stop-color="#7a5000"/>
+    </linearGradient>
+
+    <!-- ARABESCO -->
+    <linearGradient id="ara" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#fff4b0"/>
+      <stop offset="22%"  stop-color="#e8bc22"/>
+      <stop offset="48%"  stop-color="#f8dc68"/>
+      <stop offset="68%"  stop-color="#c89214"/>
+      <stop offset="100%" stop-color="#9a6800"/>
+    </linearGradient>
+
+    <!-- Relieve arabescos -->
+    <filter id="frel">
+      <feDropShadow dx="1" dy="2" stdDeviation="1.5" flood-color="#000a20" flood-opacity="0.75"/>
+    </filter>
+    <filter id="fglow">
+      <feGaussianBlur stdDeviation="1.4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <!-- TACHUELA DIAMANTE -->
+    <linearGradient id="diam" x1="5%" y1="5%" x2="95%" y2="95%">
+      <stop offset="0%"   stop-color="#fffde8"/>
+      <stop offset="15%"  stop-color="#f8dc48"/>
+      <stop offset="38%"  stop-color="#fdf4b0"/>
+      <stop offset="60%"  stop-color="#c89014"/>
+      <stop offset="82%"  stop-color="#8a6002"/>
+      <stop offset="100%" stop-color="#5a3e00"/>
+    </linearGradient>
+
+    <!-- BOLA FLECO -->
+    <radialGradient id="ball" cx="32%" cy="28%" r="68%">
+      <stop offset="0%"   stop-color="#fffde8"/>
+      <stop offset="18%"  stop-color="#f8dc48"/>
+      <stop offset="48%"  stop-color="#c89014"/>
+      <stop offset="78%"  stop-color="#8a6002"/>
+      <stop offset="100%" stop-color="#4e3600"/>
+    </radialGradient>
+
+    <!-- CUELLO Y CUERPO FLECO -->
+    <linearGradient id="tcup" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#8a6002"/>
+      <stop offset="30%"  stop-color="#d4a014"/>
+      <stop offset="55%"  stop-color="#f0d050"/>
+      <stop offset="78%"  stop-color="#c49010"/>
+      <stop offset="100%" stop-color="#8a6002"/>
+    </linearGradient>
+
+    <!-- HILOS FLECO -->
+    <linearGradient id="thl" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#8a6002"/>
+      <stop offset="20%"  stop-color="#c8900e"/>
+      <stop offset="45%"  stop-color="#f2d452"/>
+      <stop offset="68%"  stop-color="#d4a214"/>
+      <stop offset="100%" stop-color="#8a6002"/>
+    </linearGradient>
+
+    <!-- SOMBRA PRINCIPAL -->
+    <filter id="fshadow" x="-8%" y="-10%" width="120%" height="140%">
+      <feDropShadow dx="2" dy="8" stdDeviation="10" flood-color="#000818" flood-opacity="0.55"/>
+    </filter>
+
+    <!-- BARRIDO DE LUZ animado sobre el cuero -->
+    <linearGradient id="lsweep" x1="0%" y1="0%" x2="100%" y2="0%" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="white" stop-opacity="0"/>
+      <stop offset="38%"  stop-color="white" stop-opacity="0"/>
+      <stop offset="48%"  stop-color="white" stop-opacity="0.22"/>
+      <stop offset="52%"  stop-color="white" stop-opacity="0.42"/>
+      <stop offset="58%"  stop-color="white" stop-opacity="0.18"/>
+      <stop offset="72%"  stop-color="white" stop-opacity="0"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+      <animateTransform attributeName="gradientTransform" type="translate"
+        from="-560 0" to="640 0" dur="4s" repeatCount="indefinite"
+        calcMode="spline" keySplines="0.35 0 0.65 1"/>
+    </linearGradient>
+
+    <!-- BARRIDO DE LUZ sobre el marco dorado -->
+    <linearGradient id="gldsweep" x1="0%" y1="0%" x2="100%" y2="0%" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="white" stop-opacity="0"/>
+      <stop offset="44%"  stop-color="white" stop-opacity="0"/>
+      <stop offset="50%"  stop-color="white" stop-opacity="0.6"/>
+      <stop offset="56%"  stop-color="white" stop-opacity="0"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+      <animateTransform attributeName="gradientTransform" type="translate"
+        from="-560 0" to="640 0" dur="4s" repeatCount="indefinite"
+        calcMode="spline" keySplines="0.35 0 0.65 1"/>
+    </linearGradient>
+
+    <!-- Clips -->
+    <clipPath id="cOuter">
+      <path d="M 10,30 L 398,30 L 442,110 L 398,190 L 10,190 Z"/>
+    </clipPath>
+    <clipPath id="cInner">
+      <path d="M 20,44 L 390,44 L 430,110 L 390,176 L 20,176 Z"/>
+    </clipPath>
+
+  </defs>
+
+  <!-- ══════════════════════════════════
+       LISTÓN — punta en (442, 110)
+  ══════════════════════════════════ -->
+
+  <!-- Sombra -->
+  <path d="M 10,30 L 398,30 L 442,110 L 398,190 L 10,190 Z"
+        fill="#000818" opacity="0.3" transform="translate(3,10)" filter="url(#fshadow)"/>
+
+  <!-- Marco dorado exterior -->
+  <path d="M 10,30 L 398,30 L 442,110 L 398,190 L 10,190 Z"
+        fill="url(#gld)"/>
+
+  <!-- Bevel superior luz -->
+  <path d="M 10,30 L 398,30 L 406,40 L 10,40 Z" fill="white" opacity="0.22"/>
+
+  <!-- Cuero azul -->
+  <path d="M 20,44 L 390,44 L 430,110 L 390,176 L 20,176 Z"
+        fill="url(#lth)"/>
+  <!-- Textura cuero -->
+  <path d="M 20,44 L 390,44 L 430,110 L 390,176 L 20,176 Z"
+        fill="url(#lth)" filter="url(#ftex)" opacity="0.35"/>
+
+  <!-- Franja dorada top -->
+  <path d="M 20,44 L 390,44 L 398,58 L 20,58 Z" fill="url(#gld)" opacity="0.55"/>
+  <!-- Franja dorada bottom -->
+  <path d="M 20,176 L 390,176 L 398,162 L 20,162 Z" fill="url(#gld)" opacity="0.55"/>
+
+  <!-- Costura punteada superior -->
+  <path d="M 24,56 L 390,56 L 400,68" fill="none"
+        stroke="#f2d858" stroke-width="1.3" stroke-dasharray="7,5" opacity="0.8"/>
+  <!-- Costura punteada inferior -->
+  <path d="M 24,162 L 390,162 L 400,150" fill="none"
+        stroke="#f2d858" stroke-width="1.3" stroke-dasharray="7,5" opacity="0.8"/>
+
+  <!-- Línea borde interno top -->
+  <path d="M 22,64 L 390,64 L 408,80" fill="none"
+        stroke="#c89020" stroke-width="0.9" opacity="0.45"/>
+  <!-- Línea borde interno bottom -->
+  <path d="M 22,154 L 390,154 L 408,138" fill="none"
+        stroke="#c89020" stroke-width="0.9" opacity="0.45"/>
+
+  <!-- ══════════════════════════════════
+       ARABESCOS DORADOS EN RELIEVE
+  ══════════════════════════════════ -->
+  <g fill="none" stroke="url(#ara)" filter="url(#frel)">
+    <!-- Tallo central -->
+    <path d="M 50,110 C 100,110 155,110 205,110" stroke-width="3.8"/>
+    <!-- Espiral sup izq grande -->
+    <path d="M 50,110 C 44,82 60,54 88,60 C 116,66 126,88 110,99 C 94,110 78,97 86,86 C 94,75 106,82 99,90" stroke-width="3"/>
+    <!-- Espiral inf izq grande -->
+    <path d="M 50,110 C 44,138 60,166 88,160 C 116,154 126,132 110,121 C 94,110 78,123 86,134 C 94,145 106,138 99,130" stroke-width="3"/>
+    <!-- Rama sup media -->
+    <path d="M 110,99 C 128,86 152,78 175,80 C 198,82 210,95 198,104" stroke-width="2.4"/>
+    <!-- Espiral punta sup -->
+    <path d="M 198,104 C 207,97 217,101 215,109 C 213,117 204,118 200,112 C 196,106 201,101 204,105" stroke-width="2"/>
+    <!-- Rama inf media -->
+    <path d="M 110,121 C 128,134 152,142 175,140 C 198,138 210,125 198,116" stroke-width="2.4"/>
+    <!-- Espiral punta inf -->
+    <path d="M 198,116 C 207,123 217,119 215,111 C 213,103 204,102 200,108 C 196,114 201,119 204,115" stroke-width="2"/>
+    <!-- Hoja central -->
+    <path d="M 205,110 C 218,93 248,88 265,99 C 276,107 271,114 265,121 C 248,132 218,127 205,110 Z" stroke-width="2.7"/>
+    <!-- Nervadura hoja -->
+    <path d="M 207,110 C 226,104 250,104 264,110 C 250,116 226,116 207,110" stroke-width="1.3" opacity="0.65"/>
+    <!-- Detalle hoja arriba/abajo -->
+    <path d="M 232,96 C 238,88 246,92 244,98" stroke-width="1.7"/>
+    <path d="M 232,124 C 238,132 246,128 244,122" stroke-width="1.7"/>
+    <!-- Rama der sup -->
+    <path d="M 265,99 C 290,90 318,88 336,94" stroke-width="2.2"/>
+    <!-- Espiral der sup -->
+    <path d="M 336,94 C 348,87 358,92 355,101 C 352,110 342,109 341,102" stroke-width="1.8"/>
+    <!-- Rama der inf -->
+    <path d="M 265,121 C 290,130 318,132 336,126" stroke-width="2.2"/>
+    <!-- Espiral der inf -->
+    <path d="M 336,126 C 348,133 358,128 355,119 C 352,110 342,111 341,118" stroke-width="1.8"/>
+    <!-- Volutas izq extras -->
+    <path d="M 62,80 C 54,65 42,63 38,72 C 34,81 42,88 50,83" stroke-width="2"/>
+    <path d="M 62,140 C 54,155 42,157 38,148 C 34,139 42,132 50,137" stroke-width="2"/>
+    <!-- Tallos rectos -->
+    <path d="M 148,86 C 172,80 200,78 222,82" stroke-width="1.6"/>
+    <path d="M 148,134 C 172,140 200,142 222,138" stroke-width="1.6"/>
+  </g>
+
+  <!-- Capa brillo arabescos -->
+  <g fill="none" stroke="#fffac8" filter="url(#fglow)" opacity="0.2">
+    <path d="M 50,110 C 100,110 155,110 205,110" stroke-width="1.6"/>
+    <path d="M 50,110 C 44,82 60,54 88,60 C 116,66 126,88 110,99 C 94,110 78,97 86,86 C 94,75 106,82 99,90" stroke-width="1.2"/>
+    <path d="M 50,110 C 44,138 60,166 88,160 C 116,154 126,132 110,121 C 94,110 78,123 86,134 C 94,145 106,138 99,130" stroke-width="1.2"/>
+    <path d="M 205,110 C 218,93 248,88 265,99 C 276,107 271,114 265,121 C 248,132 218,127 205,110 Z" stroke-width="1.3"/>
+  </g>
+
+  <!-- ══════════════════════════════════
+       TACHUELA DIAMANTE (cerca de la punta)
+  ══════════════════════════════════ -->
+  <polygon points="368,94 387,103 387,117 368,126 358,110"
+           fill="#000818" opacity="0.35" transform="translate(3,4)"/>
+  <polygon points="368,94 387,103 387,117 368,126 358,110"
+           fill="url(#diam)"/>
+  <!-- Facetas iluminadas -->
+  <polygon points="358,110 368,94 368,103 361,110" fill="white" opacity="0.42"/>
+  <polygon points="368,94 387,103 380,103 368,99"  fill="white" opacity="0.30"/>
+  <polygon points="360,110 368,95 371,99 363,110"  fill="white" opacity="0.55"/>
+  <!-- Destello animado tachuela -->
+  <circle cx="363" cy="99" r="5" fill="white" opacity="0">
+    <animate attributeName="opacity" values="0;0;0;0.7;0.2;0;0;0;0.6;0.1;0"
+      dur="4s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- ══════════════════════════════════
+       FLECO (TASSEL) — centrado en la punta (442,110)
+       Cuello horizontal → bola → hilos colgando
+  ══════════════════════════════════ -->
+
+  <!-- Cuello horizontal que conecta punta con bola -->
+  <rect x="442" y="104" width="22" height="12" rx="5"
+        fill="url(#tcup)"/>
+  <!-- Líneas decorativas cuello -->
+  <line x1="446" y1="107" x2="461" y2="107" stroke="#f2d858" stroke-width="0.9" opacity="0.7"/>
+  <line x1="446" y1="110" x2="461" y2="110" stroke="#f2d858" stroke-width="0.9" opacity="0.7"/>
+  <line x1="446" y1="113" x2="461" y2="113" stroke="#f2d858" stroke-width="0.9" opacity="0.7"/>
+
+  <!-- Bola metálica — centrada en y=110, a x=477 -->
+  <circle cx="477" cy="110" r="15" fill="#000818" opacity="0.3" transform="translate(2,4)"/>
+  <circle cx="477" cy="110" r="15" fill="url(#ball)"/>
+  <!-- Brillo bola -->
+  <circle cx="471" cy="104" r="5"  fill="white" opacity="0.52"/>
+  <circle cx="469" cy="102" r="2.5" fill="white" opacity="0.82"/>
+
+  <!-- Cuello inferior (separa bola de los hilos) -->
+  <rect x="469" y="124" width="16" height="10" rx="4"
+        fill="url(#tcup)"/>
+
+  <!-- HILOS DEL FLECO — cuelgan verticalmente desde (477, 134) -->
+  <g opacity="0.94">
+    <line x1="458" y1="134" x2="454" y2="195" stroke="url(#thl)" stroke-width="1.6"/>
+    <line x1="462" y1="134" x2="460" y2="198" stroke="url(#thl)" stroke-width="1.6"/>
+    <line x1="466" y1="134" x2="464" y2="200" stroke="url(#thl)" stroke-width="1.6"/>
+    <line x1="470" y1="134" x2="469" y2="201" stroke="url(#thl)" stroke-width="1.6"/>
+    <line x1="474" y1="134" x2="474" y2="201" stroke="url(#thl)" stroke-width="1.6"/>
+    <line x1="478" y1="134" x2="479" y2="201" stroke="url(#thl)" stroke-width="1.6"/>
+    <line x1="482" y1="134" x2="484" y2="200" stroke="url(#thl)" stroke-width="1.6"/>
+    <line x1="486" y1="134" x2="490" y2="198" stroke="url(#thl)" stroke-width="1.6"/>
+    <line x1="490" y1="134" x2="496" y2="195" stroke="url(#thl)" stroke-width="1.6"/>
+    <!-- Hilos finos secundarios brillo -->
+    <line x1="460" y1="134" x2="457" y2="196" stroke="#f8e870" stroke-width="0.7" opacity="0.55"/>
+    <line x1="465" y1="134" x2="462" y2="199" stroke="#f8e870" stroke-width="0.7" opacity="0.55"/>
+    <line x1="470" y1="134" x2="469" y2="201" stroke="#f8e870" stroke-width="0.7" opacity="0.55"/>
+    <line x1="476" y1="134" x2="477" y2="201" stroke="#f8e870" stroke-width="0.7" opacity="0.55"/>
+    <line x1="482" y1="134" x2="485" y2="200" stroke="#f8e870" stroke-width="0.7" opacity="0.55"/>
+    <line x1="488" y1="134" x2="493" y2="196" stroke="#f8e870" stroke-width="0.7" opacity="0.55"/>
+    <!-- Remate ovalado punta del fleco -->
+    <ellipse cx="475" cy="198" rx="22" ry="5" fill="url(#tcup)" opacity="0.9"/>
+    <ellipse cx="473" cy="197" rx="9"  ry="2.5" fill="#f2d858" opacity="0.45"/>
+  </g>
+
+  <!-- ══════════════════════════════════
+       ILUMINACIÓN ANIMADA
+  ══════════════════════════════════ -->
+  <!-- Barrido cuero -->
+  <path d="M 20,44 L 390,44 L 430,110 L 390,176 L 20,176 Z"
+        fill="url(#lsweep)" clip-path="url(#cInner)"/>
+  <!-- Barrido marco dorado -->
+  <path d="M 10,30 L 398,30 L 442,110 L 398,190 L 10,190 Z"
+        fill="url(#gldsweep)" clip-path="url(#cOuter)" opacity="0.65"/>
+
+  <!-- Destello bola animado -->
+  <circle cx="470" cy="104" r="6" fill="white" opacity="0">
+    <animate attributeName="opacity" values="0;0;0.72;0.18;0;0;0;0.55;0.12;0"
+      dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="4;4;7;5;4;4;4;6;4;4"
+      dur="4s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Pulso global sutil arabescos -->
+  <path d="M 20,44 L 390,44 L 430,110 L 390,176 L 20,176 Z"
+        fill="white" opacity="0" clip-path="url(#cInner)">
+    <animate attributeName="opacity" values="0;0.05;0;0.04;0"
+      dur="4s" repeatCount="indefinite"
+      calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1"/>
+  </path>
+
+</svg>
