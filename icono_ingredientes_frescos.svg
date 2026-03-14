@@ -1,0 +1,30 @@
+<svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+<style>
+.ico-cupcake{animation:cupcakeBounce 3s ease-in-out infinite;}
+@keyframes cupcakeBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+.cream-top{animation:creamWobble 3s ease-in-out infinite;}
+@keyframes creamWobble{0%,100%{transform-origin:22px 26px;transform:scaleX(1)}50%{transform-origin:22px 26px;transform:scaleX(1.03)}}
+.hoja-cupcake{animation:hojaCupcake 2.2s ease-in-out infinite;}
+@keyframes hojaCupcake{0%,100%{transform-origin:24px 15px;transform:rotate(-5deg) scale(1)}50%{transform-origin:24px 15px;transform:rotate(6deg) scale(1.08)}}
+.sprinkle{animation:sprinkleFloat 2s ease-in-out infinite;}
+.sp1{animation-delay:0s}.sp2{animation-delay:.4s}.sp3{animation-delay:.8s}
+@keyframes sprinkleFloat{0%,100%{opacity:.8;transform:translateY(0)}50%{opacity:1;transform:translateY(-2px)}}
+</style>
+<g class="ico-cupcake">
+  <path d="M13 26 L15 36 L29 36 L31 26 Z" fill="#F6A623"/>
+  <line x1="17" y1="26" x2="16" y2="36" stroke="#E8960F" stroke-width="1"/>
+  <line x1="22" y1="26" x2="22" y2="36" stroke="#E8960F" stroke-width="1"/>
+  <line x1="27" y1="26" x2="28" y2="36" stroke="#E8960F" stroke-width="1"/>
+  <g class="cream-top">
+    <path d="M12 26 Q14 18 18 20 Q20 14 22 16 Q24 12 26 14 Q28 16 30 20 Q34 18 32 26 Z" fill="#FFF8F0"/>
+    <path d="M14 26 Q16 20 19 21 Q21 16 22 17 Q23 15 25 16 Q27 18 29 21 Q31 20 30 26" stroke="#EEE0CC" stroke-width=".8" fill="none"/>
+  </g>
+  <g class="sprinkle sp1"><rect x="18" y="18" width="3" height="1.2" rx=".6" fill="#F6C90E" transform="rotate(30 18 18)"/></g>
+  <g class="sprinkle sp2"><rect x="23" y="16" width="3" height="1.2" rx=".6" fill="#E53935" transform="rotate(-20 23 16)"/></g>
+  <g class="sprinkle sp3"><rect x="26" y="19" width="3" height="1.2" rx=".6" fill="#43A047" transform="rotate(50 26 19)"/></g>
+  <g class="hoja-cupcake">
+    <ellipse cx="26" cy="14" rx="5" ry="3" fill="#4CAF50" transform="rotate(-20 26 14)"/>
+    <line x1="24" y1="15" x2="28" y2="12" stroke="#2E7D32" stroke-width="1" stroke-linecap="round"/>
+  </g>
+</g>
+</svg>
